@@ -1,7 +1,7 @@
-const fetchNews = async (
+ export const fetchNews = async (
   category?: Category | string,
   keywords?: string,
-  isDynamic?: boolean
+  isDynamic?: boolean,
 ) => {
   // GraphQL query
   // Fetch function with Nextjs 13 caching...

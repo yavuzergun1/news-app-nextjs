@@ -7,7 +7,7 @@ type Article = {
   language: string;
   published_at: string;
   soruce: string;
-  titles: string;
+  title: string;
   url: string;
 };
 
