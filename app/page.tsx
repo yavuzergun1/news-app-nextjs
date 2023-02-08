@@ -1,10 +1,15 @@
 import React from 'react'
-type isimler = string
+import { categories } from '../constants'
 
-function Home() {
-
+ async function Home() {
+ console.log(categories);
+ 
+     const news: NewsResponse = await fetchNews(categories.join(','));
+     
   return (
-    <div>Home</div>
+      <div>
+          
+    </div>
   )
 }
 
