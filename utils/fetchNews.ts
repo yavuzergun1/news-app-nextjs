@@ -10,4 +10,4 @@
 };
 
 // STEPZEN import example for terminal
-// stepzen import curl "http://api.mediastack.com/v1/news?access_key=ac962c25dfec099d8ec9879388bc59cb&countries=us,tr&limit=100&offset=0&sort=published_desc"
+// stepzen import curl "http://api.mediastack.com/v1/news?access_key=ac962c25dfec099d8ec9879388bc59cb"
