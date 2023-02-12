@@ -32,6 +32,8 @@
 //   | "sports"
 //   | "technology";
 
+
+  // This type builded for newsApi api calls
 type News = {
   articles: [
     {
@@ -47,8 +49,3 @@ type News = {
   ];
 };
 
-type NewsResponse = {
-  status: string;
-  totalResults: number;
-  news: Articles[];
-};

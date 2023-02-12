@@ -9,7 +9,7 @@ type PageProps = {
 
 
 async function Categories({ params: { category } }: PageProps) {
-const news : News = await fetchCategoryNews(category);
+const news: News = await fetchCategoryNews(category);
 
    return (
     <div>
