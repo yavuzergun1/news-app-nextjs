@@ -1,3 +1,5 @@
+import Article from "./Article";
+
 type NewsListProp = {
   news: News;
 };
@@ -5,10 +7,9 @@ type NewsListProp = {
 function NewsList({ news }: NewsListProp) {
   return (
     <main className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 p-10 gap-10">
-      {news.articles.map((item) => (
+      {news.articles.map((article) => (
         <div>
-          <img src={item.urlToImage} alt={item.title} className="h-56 w-full object-cover rounded-t-lg shadow-md" />
-          <p>{item.title}</p>
+       <Article article={article} />
         </div>
       ))}
     </main>
