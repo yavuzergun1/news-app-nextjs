@@ -8,11 +8,11 @@ type PageProps = {
 };
 
 async function SearchList({ params: { searchTerm } }: PageProps) {
-  const news  = await fetchSearchNews(searchTerm);
+  const news : News = await fetchSearchNews(searchTerm);
 
   return (
     <div>
-      {news.articles.map((item:string) => (
+      {news.articles.map((item) => (
         <p>{item.title}</p>
       ))}
     </div>

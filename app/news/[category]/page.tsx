@@ -7,12 +7,13 @@ type PageProps = {
   };
 };
 
+
 async function Categories({ params: { category } }: PageProps) {
-const news = await fetchCategoryNews(category);
+const news : News = await fetchCategoryNews(category);
 
    return (
     <div>
-      {news.articles.map((item:string) => (
+      {news.articles.map((item) => (
         <p>{item.title}</p>
       ))}
     </div>

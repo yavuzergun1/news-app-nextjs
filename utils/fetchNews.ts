@@ -4,7 +4,7 @@ export const fetchSearchNews = async (searchTerm: any) => {
 
   );
   console.log(searchTerm);
-  const news: Articles[] = await res.json();
+  const news: News = await res.json();
   return news;
 };
 
@@ -13,8 +13,7 @@ export const fetchCategoryNews = async (searchTerm: any) => {
     `https://newsapi.org/v2/top-headlines?country=tr&category=${searchTerm}&apiKey=${process.env.NEWSAPI_API_KEY}`,
     { cache: "force-cache" }
   );
-  console.log(searchTerm);
-  const news: Articles[] = await res.json();
+  const news: News = await res.json();
   return news;
 };
 
