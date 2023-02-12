@@ -1,11 +1,15 @@
-import React from 'react'
-type isimler = string
+import React from "react";
 
-function Home() {
+async function Home() {
+  
 
-  return (
-    <div>Home</div>
-  )
+  
+
+  return <div>
+    
+news
+
+  </div>;
 }
 
-export default Home
+export default Home;
