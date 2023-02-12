@@ -1,4 +1,5 @@
 import React from "react";
+import { fetchCategoryNews } from "../../../utils/fetchNews";
 
 type PageProps = {
   params: {
@@ -6,10 +7,16 @@ type PageProps = {
   };
 };
 
-function Categories({ params: { category } }: PageProps) {
-  console.log(category);
+async function Categories({ params: { category } }: PageProps) {
+const news = await fetchCategoryNews(category);
 
-  return <div>Category: {category}</div>;
+   return (
+    <div>
+      {news.articles.map((item:string) => (
+        <p>{item.title}</p>
+      ))}
+    </div>
+  );
 }
 
 export default Categories;

@@ -13,6 +13,7 @@ console.log(router);
     e.preventDefault();
     if (!input) return;
     router.push(`/search/${input}`);
+    setInput("");
   };
 
   return (
