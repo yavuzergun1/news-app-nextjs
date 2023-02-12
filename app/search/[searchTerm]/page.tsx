@@ -1,5 +1,5 @@
 import React from "react";
-import { fetchNews } from "../../../utils/fetchNews";
+import { fetchSearchNews } from "../../../utils/fetchNews";
 
 type PageProps = {
   params: {
@@ -8,7 +8,7 @@ type PageProps = {
 };
 
 async function SearchList({ params: { searchTerm } }: PageProps) {
-  const news = await fetchNews(searchTerm);
+  const news : News = await fetchSearchNews(searchTerm);
 
   return (
     <div>
