@@ -1,13 +1,8 @@
- export const fetchNews = async (
-  category?: Category | string,
-  keywords?: string,
-  isDynamic?: boolean,
-) => {
-  // GraphQL query
-  // Fetch function with Nextjs 13 caching...
-  // sort by images by vs not images present
-  // return response
+export const fetchNews = async (searchTerm: any) => {
+  const res = await fetch(
+    `https://newsapi.org/v2/everything?q=${searchTerm}&apiKey=973aa7f1d7f6474c91c1a37d5aadd1d4`
+  );
+  console.log(searchTerm);
+  const news: Articles[] = await res.json();
+  return news;
 };
-
-// STEPZEN import example for terminal
-// stepzen import curl "http://api.mediastack.com/v1/news?access_key=ac962c25dfec099d8ec9879388bc59cb"
