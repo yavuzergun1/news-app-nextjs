@@ -23,14 +23,14 @@
 //   data: Article[];
 // };
 
-// type Category =
-//   | "general"
-//   | "business"
-//   | "entertainment"
-//   | "health"
-//   | "science"
-//   | "sports"
-//   | "technology";
+type Category =
+  | "general"
+  | "business"
+  | "entertainment"
+  | "health"
+  | "science"
+  | "sports"
+  | "technology";
 
 // This type builded for newsApi api calls
 type News = {

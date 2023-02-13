@@ -25,7 +25,7 @@ function SearchBox() {
         value={input}
         onChange={(e) => setInput(e.target.value)}
         placeholder="Search News..."
-        className="text-center w-full h-14 rounded-sm placeholder-gray-400 text-orange-500 font-semibold outline-none flex-1 bg-transparent dark:text-orange-400"
+        className="text-center w-full h-14 rounded-sm placeholder-gray-400 text-slate-700 font-semibold outline-none flex-1 bg-transparent dark:text-orange-400"
       />
       <button
         type="submit"
