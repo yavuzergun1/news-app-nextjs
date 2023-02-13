@@ -8,7 +8,7 @@ type ArticleProp = {
 
 function Article({ article }: ArticleProp) {
   return (
-    <article className="bg-slate-100 dark:bg-slate-800 flex flex-col rounded-lg shadow-sm hover:scale-105 hover:shadow-lg hover:bg-slate-200 transition-all duration-200 ease-out">
+    <article className="h-[510px] bg-slate-100 dark:bg-slate-800 flex flex-col rounded-lg shadow-sm hover:scale-105 hover:shadow-lg hover:bg-slate-200 transition-all duration-200 ease-out">
       {article.urlToImage && (
         <img
           src={article.urlToImage}
@@ -23,7 +23,7 @@ function Article({ article }: ArticleProp) {
             <p className="text-xs line-clamp-2">{article.description}</p>
           </section>
           <footer className="text-xs text-right ml-auto space-x-1 pt-5 italic text-gray-400">
-            <p>{article.content}</p>
+            <p>{article.author}</p>
             <p>
               <LiveTimeStamp time={article.publishedAt} />
             </p>
