@@ -32,8 +32,7 @@
 //   | "sports"
 //   | "technology";
 
-
-  // This type builded for newsApi api calls
+// This type builded for newsApi api calls
 type News = {
   articles: [
     {
@@ -50,13 +49,14 @@ type News = {
 };
 
 type Article = {
+  source: {
+    name: string;
+  };
   author: string | null;
   description: string;
-  published_at: string;
   title: string;
   url: string;
   urlToImage: string;
   publishedAt: string;
   content: string;
 };
-

@@ -1,4 +1,5 @@
 import React from "react";
+import ReadMoreButton from "./ReadMoreButton";
 
 type ArticleProp = {
   article: Article;
@@ -25,6 +26,7 @@ function Article({ article }: ArticleProp) {
             <p>{article.publishedAt}</p>
           </footer>
         </div>
+        <ReadMoreButton article={article} />
       </div>
     </article>
   );
