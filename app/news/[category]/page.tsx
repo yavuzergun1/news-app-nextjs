@@ -1,5 +1,6 @@
 import React from "react";
 import { fetchCategoryNews } from "../../../utils/fetchNews";
+import NewsList from "../../NewsList";
 
 type PageProps = {
   params: {
@@ -13,9 +14,8 @@ const news: News = await fetchCategoryNews(category);
 
    return (
     <div>
-      {news.articles.map((item) => (
-        <p>{item.title}</p>
-      ))}
+  <NewsList news={news} />
+  
     </div>
   );
 }

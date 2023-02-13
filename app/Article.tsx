@@ -26,7 +26,7 @@ function Article({ article }: ArticleProp) {
             <p>{article.publishedAt}</p>
           </footer>
         </div>
-        <ReadMoreButton article={article} />
+        <ReadMoreButton article={article}/>
       </div>
     </article>
   );
