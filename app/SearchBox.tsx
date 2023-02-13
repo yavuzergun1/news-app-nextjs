@@ -7,7 +7,6 @@ import { ChangeEvent } from "react";
 function SearchBox() {
   const [input, setInput] = useState("");
   const router = useRouter();
-console.log(router);
 
   const handleSearch = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();

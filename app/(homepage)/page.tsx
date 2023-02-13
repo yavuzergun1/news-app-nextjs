@@ -1,5 +1,5 @@
 import React from "react";
-import NewsList from "./NewsList";
+import NewsList from "../NewsList";
 import { fetchHomePageNews } from "../../utils/fetchNews";
 
 async function HomePage() {

@@ -23,7 +23,7 @@ function Header() {
           
           <DarkModeButton />
           
-          <button className="hidden md:inline bg-slate-900 text-white px-4 lg:px8 py-2 lg:py-2 rounded-full dark:bg-slate-800">
+          <button className="hidden md:inline bg-slate-900 text-white px-4 lg:px8 py-2  rounded-full dark:bg-slate-800">
             {" "}
             Subscribe Now!{" "}
           </button>
