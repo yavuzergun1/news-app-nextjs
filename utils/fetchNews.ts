@@ -1,20 +1,29 @@
-export const fetchSearchNews = async (searchTerm: any) => {
+export const fetchSearchNews = async (searchTerm: string) => {
   const res = await fetch(
-    `https://newsapi.org/v2/everything?q=${searchTerm}&apiKey=${process.env.NEWSAPI_API_KEY}`
-
+    `https://newsapi.org/v2/everything?q=${searchTerm}&apiKey=${process.env.NEWSAPI_API_KEY}`,
+    { next: { revalidate: 40 } }
   );
   console.log(searchTerm);
   const news: News = await res.json();
   return news;
 };
 
-export const fetchCategoryNews = async (searchTerm: any) => {
+export const fetchCategoryNews = async (category: string) => {
   const res = await fetch(
-    `https://newsapi.org/v2/top-headlines?country=tr&category=${searchTerm}&apiKey=${process.env.NEWSAPI_API_KEY}`,
-    { cache: "force-cache" }
+    `https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=${process.env.NEWSAPI_API_KEY}`,
+    { next: { revalidate: 40 } }
   );
   const news: News = await res.json();
   return news;
 };
 
-// https://newsapi.org/v2/top-headlines?country=tr&apiKey=973aa7f1d7f6474c91c1a37d5aadd1d4
+export const fetchHomePageNews = async () => {
+  const res = await fetch(
+    `https://newsapi.org/v2/top-headlines?country=us&apiKey=${process.env.NEWSAPI_API_KEY}`,
+    { next: { revalidate: 20 } }
+  );
+  const news: News = await res.json();
+  console.log(news);
+  
+  return news;
+};

@@ -23,15 +23,16 @@
 //   data: Article[];
 // };
 
-// type Category =
-//   | "general"
-//   | "business"
-//   | "entertainment"
-//   | "health"
-//   | "science"
-//   | "sports"
-//   | "technology";
+type Category =
+  | "general"
+  | "business"
+  | "entertainment"
+  | "health"
+  | "science"
+  | "sports"
+  | "technology";
 
+// This type builded for newsApi api calls
 type News = {
   articles: [
     {
@@ -47,8 +48,15 @@ type News = {
   ];
 };
 
-type NewsResponse = {
-  status: string;
-  totalResults: number;
-  news: Articles[];
+type Article = {
+  source: {
+    name: string;
+  };
+  author: string | null;
+  description: string;
+  title: string;
+  url: string;
+  urlToImage: string;
+  publishedAt: string;
+  content: string;
 };
