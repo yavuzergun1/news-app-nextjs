@@ -1,5 +1,4 @@
 import "../styles/globals.css";
-import Head from "./head";
 import Header from "./Header";
 import Providers from "./Providers";
 
@@ -10,7 +9,6 @@ export default function RootLayout({
 }) {
   return (
     <html>
-      {/* <Head/> */}
         <body className="bg-gray-100 dark:bg-zinc-900 transition-all duration-700">
       <Providers>
           <Header />
