@@ -5,6 +5,8 @@ type PageProps = {
 };
 
 function ArticlePage({ searchParams }: PageProps) {
+  console.log(searchParams);
+  
   if (
     (searchParams && Object.entries(searchParams).length === 0) ||
     !searchParams

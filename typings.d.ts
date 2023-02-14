@@ -34,22 +34,10 @@ type Category =
 
 // This type builded for newsApi api calls
 type News = {
-  articles: [
-    {
-      author: string | null;
-      description: string;
-      published_at: string;
-      title: string;
-      url: string;
-      urlToImage: string;
-      publishedAt: string;
-      content: string;
-    }
-  ];
+  articles: Article[];
 };
 
 type Article = {
-
   author: string | null;
   description: string;
   title: string;
