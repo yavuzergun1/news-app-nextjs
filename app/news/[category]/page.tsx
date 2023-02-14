@@ -29,7 +29,7 @@ export async function generalteStaticParams() {
 }))
 }
 
-// It probuildes this pages:
+// It prebuildes this pages:
 // localhost:3000/news/business
 // localhost:3000/news/entertainment
 // localhost:3000/news/general
