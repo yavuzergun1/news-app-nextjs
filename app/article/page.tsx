@@ -1,10 +1,12 @@
 import { notFound } from "next/navigation";
 
-type Props = {
+type PageProps = {
   searchParams: Article;
 };
 
-function ArticlePage({ searchParams }: Props) {
+function ArticlePage({ searchParams }: PageProps) {
+  console.log(searchParams);
+  
   if (
     (searchParams && Object.entries(searchParams).length === 0) ||
     !searchParams
