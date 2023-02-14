@@ -1,12 +1,13 @@
+
 import React from "react";
 import { fetchSearchNews } from "../../utils/fetchNews";
 import NewsList from "../NewsList";
 
-type PageProps = {
+type SearchPageProps = {
   searchParams: { term: string };
 };
 
-async function SearchList({ searchParams }: PageProps) {
+async function SearchList({ searchParams }: SearchPageProps) {
   const news: News = await fetchSearchNews(searchParams?.term);
   console.log(searchParams);
 
