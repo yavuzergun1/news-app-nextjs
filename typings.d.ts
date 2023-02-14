@@ -23,6 +23,7 @@
 //   data: Article[];
 // };
 
+// This types builded for newsApi api calls
 type Category =
   | "general"
   | "business"
@@ -32,7 +33,6 @@ type Category =
   | "sports"
   | "technology";
 
-// This type builded for newsApi api calls
 type News = {
   articles: Article[];
 };
