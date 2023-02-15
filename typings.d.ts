@@ -38,7 +38,8 @@ type News = {
 };
 
 type Article = {
-  author: string | null;
+  source: any;
+  author?: string | null;
   description: string;
   title: string;
   url: string;

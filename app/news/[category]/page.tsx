@@ -3,13 +3,13 @@ import { categories } from "../../../constants";
 import { fetchCategoryNews } from "../../../utils/fetchNews";
 import NewsList from "../../NewsList";
 
-type PageProps = {
+type CategoryPageProps = {
   params: {
     category: string;
   };
 };
 
-async function Categories({ params: { category } }: PageProps) {
+async function Categories({ params: { category } }: CategoryPageProps) {
   const news: News = await fetchCategoryNews(category);
 
   return (
