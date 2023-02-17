@@ -24,9 +24,8 @@ export default Categories;
 
 export async function generateStaticParams() {
   return categories.map((category) => ({
-  category:category,
-  
-}))
+    category: category,
+  }));
 }
 
 // It prebuildes this pages:
