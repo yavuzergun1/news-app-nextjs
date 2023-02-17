@@ -23,11 +23,7 @@ export const fetchHomePageNews = async () => {
     { next: { revalidate: 20 } }
   );
   const news: News = await res.json();
-<<<<<<< HEAD
   console.log(news);
   
-=======
-
->>>>>>> 7573a66f9f7671cf7d15042091cf2046e787cddb
   return news;
 };
