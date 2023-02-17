@@ -22,7 +22,7 @@ async function Categories({ params: { category } }: CategoryPageProps) {
 
 export default Categories;
 
-export async function generalteStaticParams() {
+export async function generateStaticParams() {
   return categories.map((category) => ({
     category: category,
   }));
