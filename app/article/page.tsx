@@ -6,7 +6,7 @@ type ArticlePageProps = {
 
 function ArticlePage({ searchParams }: ArticlePageProps) {
   console.log(searchParams);
-  
+
   if (
     (searchParams && Object.entries(searchParams).length === 0) ||
     !searchParams
@@ -37,8 +37,8 @@ function ArticlePage({ searchParams }: ArticlePageProps) {
             </h2>
 
             <p className="pl-4">{article.publishedAt} </p>
-                  </div>
-                  <p className="pt-4">{article.description} </p>
+          </div>
+          <p className="pt-4">{article.description} </p>
         </div>
       </section>
     </article>

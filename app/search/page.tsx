@@ -1,4 +1,3 @@
-
 import React from "react";
 import { fetchSearchNews } from "../../utils/fetchNews";
 import NewsList from "../NewsList";

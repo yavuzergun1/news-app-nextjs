@@ -16,9 +16,9 @@ function DarkModeButton() {
     return null;
   }
 
-  const currentTheme = theme === "system" ? systemTheme: theme;
+  const currentTheme = theme === "system" ? systemTheme : theme;
 
-  return ( 
+  return (
     <div>
       {currentTheme === "dark" ? (
         <SunIcon
