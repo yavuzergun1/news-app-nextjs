@@ -1,7 +1,7 @@
 export const fetchSearchNews = async (searchTerm: string) => {
   const res = await fetch(
     `https://newsapi.org/v2/everything?q=${searchTerm}&apiKey=${process.env.NEWSAPI_API_KEY}`,
-    { next: { revalidate: 40 } }
+    { cache: "no-cache" }
   );
   console.log(searchTerm);
   const news: News = await res.json();
@@ -23,7 +23,5 @@ export const fetchHomePageNews = async () => {
     { next: { revalidate: 20 } }
   );
   const news: News = await res.json();
-  console.log(news);
-  
   return news;
 };

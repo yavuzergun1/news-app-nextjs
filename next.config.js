@@ -2,8 +2,8 @@
 module.exports = {
   reactStrictMode: true,
   experimental: {
-    appDir: true,
-  },
+    appDir: true
+  }
   // typescript: {
   //   // !! WARN !!
   //   // Dangerously allow production builds to successfully complete even if
@@ -11,4 +11,4 @@ module.exports = {
   //   // !! WARN !!
   //   ignoreBuildErrors: true,
   // },
-};
+}
