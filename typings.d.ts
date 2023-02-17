@@ -38,7 +38,9 @@ type News = {
 };
 
 type Article = {
-  author: string | null;
+  searhParams: any;
+  source: any;
+  author?: string | null;
   description: string;
   title: string;
   url: string;

@@ -1,10 +1,10 @@
 import { notFound } from "next/navigation";
 
-type PageProps = {
-  searchParams: Article;
+type ArticlePageProps = {
+  searchParams?: Article;
 };
 
-function ArticlePage({ searchParams }: PageProps) {
+function ArticlePage({ searchParams }: ArticlePageProps) {
   console.log(searchParams);
   
   if (

@@ -3,13 +3,13 @@ import { categories } from "../../../constants";
 import { fetchCategoryNews } from "../../../utils/fetchNews";
 import NewsList from "../../NewsList";
 
-type PageProps = {
+type CategoryPageProps = {
   params: {
     category: string;
   };
 };
 
-async function Categories({ params: { category } }: PageProps) {
+async function Categories({ params: { category } }: CategoryPageProps) {
   const news: News = await fetchCategoryNews(category);
 
   return (
@@ -22,14 +22,14 @@ async function Categories({ params: { category } }: PageProps) {
 
 export default Categories;
 
-export async function generalteStaticParams() {
+export async function generateStaticParams() {
   return categories.map((category) => ({
   category:category,
   
 }))
 }
 
-// It probuildes this pages:
+// It prebuildes this pages:
 // localhost:3000/news/business
 // localhost:3000/news/entertainment
 // localhost:3000/news/general
