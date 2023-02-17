@@ -24,6 +24,6 @@ export const fetchHomePageNews = async () => {
   );
   const news: News = await res.json();
   console.log(news);
-  
+
   return news;
 };
