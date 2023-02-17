@@ -38,13 +38,12 @@ type News = {
 };
 
 type Article = {
-  searhParams: any;
   source: any;
   author?: string | null;
-  description: string;
-  title: string;
-  url: string;
-  urlToImage: string;
+  description?: string;
+  title?: string;
+  url?: string;
+  urlToImage?: string;
   publishedAt: string;
-  content: string;
+  content?: string;
 };
