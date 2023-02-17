@@ -1,8 +1,14 @@
 import { notFound } from "next/navigation";
 
+
 type ArticlePageProps = {
+<<<<<<< Updated upstream
   searchParams: Article;
 };
+=======
+  searchParams?: Article;
+}
+>>>>>>> Stashed changes
 
 function ArticlePage({ searchParams }: ArticlePageProps) {
   console.log(searchParams);
