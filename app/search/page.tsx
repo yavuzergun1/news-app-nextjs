@@ -4,11 +4,11 @@ import { fetchSearchNews } from "../../utils/fetchNews";
 import NewsList from "../NewsList";
 
 type SearchPageProps = {
-  searchParams: { term: string };
+  searchParams?: { term?: string };
 };
 
 async function SearchList({ searchParams }: SearchPageProps) {
-  const news: News = await fetchSearchNews(searchParams?.term);
+  const news: News = await fetchSearchNews(searchParams?.term!);
   console.log(searchParams);
 
   return (

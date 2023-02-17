@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 
 type ArticlePageProps = {
-  searchParams: Article;
+  searchParams?: Article;
 };
 
 function ArticlePage({ searchParams }: ArticlePageProps) {
