@@ -23,7 +23,7 @@ export const fetchHomePageNews = async () => {
     { next: { revalidate: 20 } }
   );
   const news: News = await res.json();
-  console.log(news);
+  // console.log(news);
   
   return news;
 };

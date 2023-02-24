@@ -8,7 +8,7 @@ type SearchPageProps = {
 
 async function SearchList({ searchParams }: SearchPageProps) {
   const news: News = await fetchSearchNews(searchParams?.term!);
-  console.log(searchParams);
+  console.log("SEARCH PAGE PARAMS:",searchParams);
 
   return (
     <div>
