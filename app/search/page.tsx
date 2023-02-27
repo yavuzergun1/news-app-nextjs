@@ -1,4 +1,4 @@
-"use client"
+
 
 import React from "react";
 import { fetchSearchNews } from "../../utils/fetchNews";
@@ -14,7 +14,7 @@ async function SearchList({ searchParams }: SearchPageProps) {
 
   return (
     <div>
-      <h1 className="headerTitle">Search Results for: {searchParams?.term} </h1>
+      <h1 className="headerTitle">Search Results for:{searchParams?.term} </h1>
       <NewsList news={news} />
     </div>
   );
