@@ -5,25 +5,22 @@ import { fetchSearchNews } from "../../utils/fetchNews";
 import NewsList from "../NewsList";
 import { useSearchParams } from "next/navigation";
 
-type NewsListProp = {
-  news: News;
-};
+
+
+type Term = { term: string };
 
 function SearchList() {
-  const [searchNews, setSearchNews] = useState<NewsListProp[]>([]);
+  const [searchNews, setSearchNews] = useState<Article[]>([]);
 
   const searchParams = useSearchParams();
-  const term = searchParams.get("term");
+  const term: any = searchParams.get("term");
 
   useEffect(() => {
     const getData = async () => {
       console.log("SEARCH PAGE PARAMS:", term);
 
-      // @ts-ignore
       const news: News = await fetchSearchNews(term);
       console.log(news);
-
-      // @ts-ignore
 
       setSearchNews(news.articles);
     };
@@ -33,7 +30,6 @@ function SearchList() {
   return (
     <div>
       <h1 className="headerTitle">Search Results for:{term} </h1>
-      {/* @ts-ignore */}
       <NewsList news={searchNews} /> : null
     </div>
   );
