@@ -16,10 +16,6 @@ function ArticlePage () {
   const description = searchParams.get("description");
   const author = searchParams.get("author");
 
-
-
-
-
   if (
     (searchParams && Object.entries(searchParams).length === 0) ||
     !searchParams

@@ -1,7 +1,7 @@
 export const fetchSearchNews = async (searchTerm: string) => {
-  console.log(searchTerm);
+  console.log("FETCHNEWS TERM",searchTerm);
   const res = await fetch(
-    `https://newsapi.org/v2/everything?q=${searchTerm}&apiKey=${process.env.NEWSAPI_API_KEY}`,
+    `https://newsapi.org/v2/everything?q=${searchTerm}&apiKey=4430ec11dc80439abae5db737210b11b`,
     { cache: "no-cache" }
   );
   const news: News = await res.json();
