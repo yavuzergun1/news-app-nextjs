@@ -1,10 +1,9 @@
 "use client";
 
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 import { fetchSearchNews } from "../../utils/fetchNews";
 import NewsList from "../NewsList";
 import { useSearchParams } from "next/navigation";
-
 
 type NewsListProp = {
   news: News;
@@ -15,38 +14,28 @@ function SearchList() {
 
   const searchParams = useSearchParams();
   const term = searchParams.get("term");
-  console.log("SEARCH PAGE PARAMS:", term);
 
   useEffect(() => {
     const getData = async () => {
-      type termProp={ term: string;}
+      console.log("SEARCH PAGE PARAMS:", term);
 
-      try {
-        const news: News = await fetchSearchNews(term);
+      // @ts-ignore
+      const news: News = await fetchSearchNews(term);
+      console.log(news);
 
-        setSearchNews(news);
+      // @ts-ignore
 
-      } catch (err) {
-        console.log(err);
-      }
+      setSearchNews(news.articles);
     };
     getData();
   }, [term]);
 
-  if (!searchNews) {
-    return (
-      <div>Loading...</div>
-    )
-   }
-console.log(searchNews);
-
-    return (
-      <div>
-        <h1 className="headerTitle">Search Results for:{term} </h1>
-      
-        <NewsList news={searchNews} />
-      </div>
-    );
-  
+  return (
+    <div>
+      <h1 className="headerTitle">Search Results for:{term} </h1>
+      {/* @ts-ignore */}
+      <NewsList news={searchNews} /> : null
+    </div>
+  );
 }
 export default SearchList;

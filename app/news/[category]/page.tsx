@@ -11,11 +11,12 @@ type CategoryPageProps = {
 
 async function Categories({ params: { category } }: CategoryPageProps) {
   const news: News = await fetchCategoryNews(category);
+  const articles = news.articles;
 
   return (
     <div>
       <h1 className="headerTitle">{category}</h1>
-      <NewsList news={news} />
+      <NewsList news={articles} />
     </div>
   );
 }
