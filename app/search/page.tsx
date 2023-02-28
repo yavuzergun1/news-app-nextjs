@@ -30,7 +30,7 @@ function SearchList() {
   return (
     <div>
       <h1 className="headerTitle">Search Results for:{term} </h1>
-      <NewsList news={searchNews} /> : null
+      <NewsList news={searchNews} /> 
     </div>
   );
 }

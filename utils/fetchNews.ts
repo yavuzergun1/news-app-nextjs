@@ -12,7 +12,7 @@ export const fetchSearchNews = async (searchTerm: string) => {
 
 export const fetchCategoryNews = async (category: string) => {
   const res = await fetch(
-    `https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=${process.env.NEWSAPI_API_KEY}`,
+    `https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=973aa7f1d7f6474c91c1a37d5aadd1d4`,
     { next: { revalidate: 40 } }
   );
   const news: News = await res.json();
@@ -21,7 +21,7 @@ export const fetchCategoryNews = async (category: string) => {
 
 export const fetchHomePageNews = async () => {
   const res = await fetch(
-    `https://newsapi.org/v2/top-headlines?country=us&apiKey=${process.env.NEWSAPI_API_KEY}`,
+    `https://newsapi.org/v2/top-headlines?country=us&apiKey=$973aa7f1d7f6474c91c1a37d5aadd1d4`,
     { next: { revalidate: 20 } }
   );
   const news: News = await res.json();
