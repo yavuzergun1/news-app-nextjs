@@ -2,7 +2,10 @@
 module.exports = {
   reactStrictMode: false,
   experimental: {
-    appDir: true
+    appDir: true,
+  },
+  env: {
+    NEWSAPI_API_KEY: process.env.NEWSAPI_API_KEY,
   },
   // typescript: {
   //   // !! WARN !!
@@ -11,4 +14,4 @@ module.exports = {
   //   // !! WARN !!
   //   ignoreBuildErrors: true,
   // },
-}
+};
